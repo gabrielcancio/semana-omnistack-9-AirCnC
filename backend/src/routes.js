@@ -3,7 +3,7 @@ const express = require('express');
 const routes = express.Router();
 
 routes.get('/', (request, response) => {
-    response.json({
+    return response.json({
         name: 'Gabriel Cancio',
         message: 'Hello OmniStack!!',
         evento: 'Semana OmniStack',
