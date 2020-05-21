@@ -14,3 +14,5 @@ app.use(express.json());
 app.use(routes);
 
 module.exports = app;
+// Vídeo (39:14)
+// Lembrar de mudar o usuário do Mongo e cirar uma variável ambiente para deixa-lo seguro

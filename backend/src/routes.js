@@ -1,15 +1,9 @@
 const express = require('express');
+const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
 
-routes.get('/', (request, response) => {
-    return response.json({
-        name: 'Gabriel Cancio',
-        message: 'Hello OmniStack!!',
-        evento: 'Semana OmniStack',
-        versao: 9
-    });
-});
+routes.get('/users', SessionController.store);
 
 module.exports = routes;
 
