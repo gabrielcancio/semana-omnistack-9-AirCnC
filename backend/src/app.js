@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const routes = require('./routes');
 
@@ -10,9 +11,8 @@ mongoose.connect('mongodb+srv://dev-gabriel-cancio:AK47762M4556@cluster0-08vwv.m
     useUnifiedTopology: true
 });
 
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
 module.exports = app;
-// Vídeo (39:14)
-// Lembrar de mudar o usuário do Mongo e cirar uma variável ambiente para deixa-lo seguro
