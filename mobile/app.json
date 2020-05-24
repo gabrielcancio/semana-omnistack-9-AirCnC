@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "AirCnC",
+    "slug": "AirCnC",
     "platforms": [
       "ios",
       "android",
