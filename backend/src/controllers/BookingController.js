@@ -17,6 +17,13 @@ module.exports = {
           .populate('spot')
           .execPopulate();
 
+          const ownerSpot = request.connectedUsers[booking.spot.user];
+
+          if(ownerSpot) {
+              console.log(ownerSpot);
+              request.io.to(ownerSpot).emit('booking_request', booking);
+          }
+
         return response.json(booking);
     }
 };
