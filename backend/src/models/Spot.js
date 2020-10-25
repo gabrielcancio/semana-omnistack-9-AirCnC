@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+const imageUrlParser = require('../utils/imageUrlParser');
+
+const url = imageUrlParser();
 
 const SpotSchema = new mongoose.Schema({
     thumbnail: String,
@@ -16,7 +19,7 @@ const SpotSchema = new mongoose.Schema({
 });
 
 SpotSchema.virtual('thumbnail_url').get(function() {
-    return `http://192.168.42.81:3333/files/${this.thumbnail}`
+    return `${url}/${this.thumbnail}`
 })
 
 module.exports = mongoose.model('Spot', SpotSchema);
