@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AsyncStorage, SafeAreaView , Platform, ScrollView, View, Text, Image, StyleSheet, Alert } from 'react-native';
+import urlProvider from '../utils/urlProvider';
 import socketio from 'socket.io-client';
 import Constants from 'expo-constants';
 
@@ -10,9 +11,11 @@ import logoImg from '../assets/logo.png';
 export default function List() {
     const [techs, setTechs] = useState([]);
 
+    const url = urlProvider();
+
     useEffect(() => {
         AsyncStorage.getItem('user').then(user_id => {
-            const socket = socketio('http://192.168.42.81:3333', {
+            const socket = socketio(url, {
                 query: { user_id }
             });
 

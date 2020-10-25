@@ -5,3 +5,5 @@ function imageUrlParser() {
 
     return `http://${ip}:3333/files`
 }
+
+module.exports = imageUrlParser;
