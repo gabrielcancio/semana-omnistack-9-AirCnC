@@ -48,7 +48,7 @@
 ---
 
 ## 🔖 Layout
-You can access the layout of project in .scketch format [here](.github/DevRadar.sketc).
+You can access the layout of project in .scketch format [here](https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/semana-omnistack/aircnc.sketch).
 
 ---
 
