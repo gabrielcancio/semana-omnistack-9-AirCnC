@@ -1,4 +1,5 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
@@ -8,13 +9,15 @@ const http = require('http');
 
 const routes = require('./routes');
 
+dotenv.config();
+
 const app = express();
 
 const server = http.Server(app);
 const io = socketio(server);
 
 
-mongoose.connect('mongodb+srv://dev-gabriel-cancio:AK47762M4556@cluster0-08vwv.mongodb.net/semana09?retryWrites=true&w=majority', {
+mongoose.connect(, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
